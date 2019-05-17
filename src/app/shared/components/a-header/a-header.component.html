@@ -1,0 +1,39 @@
+<div class="aj-header">
+  <div class="aj-header__a">
+    <mat-grid-list cols="4" rowHeight="" gutterSize="18">
+      <mat-grid-tile colspan="1" rowspan="1">
+        <img *ngIf="seller.avatar" [src]="seller.avatar" alt="" width="100%" height="100%" />
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="3" rowspan="1" style="justify-content: start;">
+        <div class="aj-header__a__info" fxLayout="column">
+          <div class="mat-subheading-2">{{ seller.name }}</div>
+          <div class="mat-body-1">{{ seller.description }}/{{ seller.deliveryTime }}分钟送达</div>
+
+          <div *ngIf="seller.supports" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="mat-body-1">{{ seller.supports[0].description }}</div>
+            <div fxLayout="row" fxLayoutAlign="center center" style="    background-color: #fdfdfdbd;
+    color: #000;
+    border-radius: 1em;
+    padding: 2px; margin-bottom: 4px;" (click)="open()">
+              <span style="font-size: 12px;">{{ seller.supports.length }}个</span>
+              <mat-icon>navigate_next</mat-icon>
+            </div>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <div class="aj-header__a__background">
+      <img [src]="seller.avatar" width="100%" height="100%" />
+    </div>
+  </div>
+  <div class="aj-header__b" fxLayout="row" fxLayoutAlign="center center">
+    <span class="mat-body-1" style="white-space: nowrap;" fxFlex="10%">信息</span>
+    <div class="mat-body-2" fxFlex="90%" style="overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;">
+      {{ seller.bulletin }}
+    </div>
+    <mat-icon fxFlex="5%">navigate_next</mat-icon>
+  </div>
+</div>

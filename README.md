@@ -88,3 +88,26 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ```ts
 import { environment as env } from "~env/environment";
 ```
+
+
+## 配置多个"material them" [文档](https://material.angular.io/guide/theming)
+
+
+## 导入json数据，配置"tsconfig.json" [文档](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-9.html)
+
+tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "resolveJsonModule": true
+  }
+}
+```
+
+x.ts
+```ts
+import * as data from "./data.json";
+console.log(data.seller);
+```
+
+## 安装ngxs "ng add @ngxs/schematics"

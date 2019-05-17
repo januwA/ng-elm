@@ -1,3 +1,33 @@
-ok
-<p>{{ v }}</p>
+<app-a-header [seller]="seller"></app-a-header>
+<app-header-detail @fade-header-detail *ngIf="isShowHeaderDetail$ | async" [seller]="seller">
+</app-header-detail>
+
+<mat-tab-group mat-stretch-tabs [selectedIndex]='tabData.selectedIndex'
+  (selectedTabChange)="selectedTabChange($event)">
+  <mat-tab *ngFor="let item of tabData.tabs; let i=index;">
+    <ng-template mat-tab-label>{{item.label}}</ng-template>
+    <div>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+      <p>Content {{ i }}</p>
+    </div>
+  </mat-tab>
+</mat-tab-group>
 <router-outlet></router-outlet>

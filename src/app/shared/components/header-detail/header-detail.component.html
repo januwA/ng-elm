@@ -1,0 +1,29 @@
+<div class="detail">
+  <div class="detail-wrapper">
+    <div class="detail-main">
+      <h1 class="name">{{seller.name}} {{seller.score}}星</h1>
+      <div class="title">
+        <div class="line"></div>
+        <div class="text">优惠信息</div>
+        <div class="line"></div>
+      </div>
+      <mat-list dense>
+        <mat-list-item style="color: #fff;" *ngFor="let item of seller.supports; let i=index">
+          <mat-icon mat-list-icon>star</mat-icon>
+          <h3 mat-line>{{seller.supports[i].description}}</h3>
+        </mat-list-item>
+      </mat-list>
+      <div class="title">
+        <div class="line"></div>
+        <div class="text">商家公告</div>
+        <div class="line"></div>
+      </div>
+      <div class="bulletin">
+        <p class="mat-body-2">{{seller.bulletin}}</p>
+      </div>
+      <div class="detail-close">
+        <mat-icon (click)="close()">close</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

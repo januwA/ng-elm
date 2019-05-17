@@ -1,10 +1,23 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import {
+  MatButtonModule,
+  MatGridListModule,
+  MatChipsModule,
+  MatIconModule,
+  MatListModule,
+  MatTabsModule
+} from "@angular/material";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  exports: [
+    MatButtonModule,
+    MatGridListModule,
+    FlexLayoutModule,
+    MatChipsModule,
+    MatIconModule,
+    MatListModule,
+    MatTabsModule,
+  ],
 })
 export class MatModule { }
